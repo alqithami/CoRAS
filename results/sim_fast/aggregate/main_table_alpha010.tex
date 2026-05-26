@@ -1,0 +1,15 @@
+\begin{tabular}{llllll}
+\toprule
+Method & Coverage & |Coverage gap| & Mean set size & Top-1 acc. & Unsafe singleton error \\
+\midrule
+aps\_conformal & 0.943 & 0.043 & 13.743 & 0.086 & 0.000 \\
+coras & 0.943 & 0.043 & 13.286 & 0.071 & 0.000 \\
+coras\_aps & 0.943 & 0.043 & 13.986 & 0.071 & 0.000 \\
+mondrian\_domain & 0.943 & 0.043 & 13.343 & 0.071 & 0.000 \\
+prompt\_only\_top1 & 0.071 & 0.829 & 1.000 & 0.071 & 0.929 \\
+temperature\_conformal & 0.943 & 0.043 & 13.957 & 0.086 & 0.000 \\
+top1\_singleton & 0.086 & 0.814 & 1.000 & 0.086 & 0.914 \\
+topk\_calibrated & 0.957 & 0.057 & 14.000 & 0.086 & 0.000 \\
+vanilla\_conformal & 0.943 & 0.043 & 13.971 & 0.086 & 0.000 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,22 @@
+{
+  "alpha": 0.1,
+  "methods": [
+    "top1_singleton",
+    "topk_calibrated",
+    "vanilla_conformal",
+    "aps_conformal",
+    "temperature_conformal",
+    "prompt_only_top1",
+    "coras",
+    "coras_aps",
+    "mondrian_domain"
+  ],
+  "n_calib": 67,
+  "n_test": 70,
+  "n_tune": 47,
+  "temperature": 13.857666015625,
+  "timings": {
+    "base_collect_seconds": 0.6723255830002017,
+    "prompt_collect_seconds": 0.03557895799167454
+  }
+}

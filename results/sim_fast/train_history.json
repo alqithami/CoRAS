@@ -1,0 +1,25 @@
+{
+  "device": "mps",
+  "history": [
+    {
+      "epoch": 0,
+      "stage": "source_train",
+      "train_acc": 0.835221421215242,
+      "train_loss": 0.8916725429920163,
+      "train_n": 971,
+      "tune_acc": 0.10638297872340426,
+      "tune_loss": 3.300985813140869,
+      "tune_n": 47
+    },
+    {
+      "calib_acc": 0.014925373134328358,
+      "calib_loss": 3.3640773260771337,
+      "calib_n": 67,
+      "epoch": 0,
+      "stage": "target_adapter",
+      "tune_acc": 0.6170212765957447,
+      "tune_loss": 1.5703548192977905,
+      "tune_n": 47
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Method,Coverage,|Coverage gap|,Mean set size,Top-1 acc.,Unsafe singleton error
+aps_conformal,0.943,0.043,13.743,0.086,0.000
+coras,0.943,0.043,13.286,0.071,0.000
+coras_aps,0.943,0.043,13.986,0.071,0.000
+mondrian_domain,0.943,0.043,13.343,0.071,0.000
+prompt_only_top1,0.071,0.829,1.000,0.071,0.929
+temperature_conformal,0.943,0.043,13.957,0.086,0.000
+top1_singleton,0.086,0.814,1.000,0.086,0.914
+topk_calibrated,0.957,0.057,14.000,0.086,0.000
+vanilla_conformal,0.943,0.043,13.971,0.086,0.000

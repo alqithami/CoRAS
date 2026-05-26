@@ -1,0 +1,6 @@
+# Install after the base requirements when you want public robot datasets.
+# Newer LeRobot releases may require Python 3.10+ or 3.12 depending on version.
+lerobot[video]>=0.4.0
+huggingface_hub>=0.24
+av>=12.0
+torchcodec>=0.1.0

@@ -1,0 +1,11 @@
+{
+  "calib": 190,
+  "target_domains": [
+    "target_camera_shift",
+    "target_lighting_shift",
+    "target_occluded"
+  ],
+  "test": 501,
+  "train": 7027,
+  "tune": 311
+}
