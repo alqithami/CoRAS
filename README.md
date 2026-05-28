@@ -111,7 +111,3 @@ box_coverage_alpha010.png
 box_mean_set_size_alpha010.png
 box_fail_to_abstain_rate_alpha010.png
 ```
-
-## Main paper vs appendix
-
-Use the compact `main_table_alpha010` table for the main eight-page paper. Use the full aggregate metrics, per-domain CSVs, prediction-set CSVs, and box plots for the appendix.
