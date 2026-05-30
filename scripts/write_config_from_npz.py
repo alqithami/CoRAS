@@ -48,6 +48,7 @@ def main() -> None:
     parser.add_argument("--test-frac", type=float, default=0.25)
     parser.add_argument("--num-workers", type=int, default=0)
     parser.add_argument("--include-remaining-target-in-train", action="store_true")
+    parser.add_argument("--exclude-source-with-target-eval-episodes", action="store_true")
     args = parser.parse_args()
     target_domains = choose_target_domains(args.data, args.n_target_domains, args.min_target_count, args.target_domain)
     cfg = {
@@ -73,6 +74,7 @@ def main() -> None:
         "calib_frac": args.calib_frac,
         "test_frac": args.test_frac,
         "include_remaining_target_in_train": bool(args.include_remaining_target_in_train),
+        "exclude_source_with_target_eval_episodes": bool(args.exclude_source_with_target_eval_episodes),
         "torch_threads": 4,
         "methods": ["top1_singleton", "topk_calibrated", "vanilla_conformal", "aps_conformal", "temperature_conformal", "prompt_only_top1", "coras", "coras_aps", "mondrian_domain"],
     }

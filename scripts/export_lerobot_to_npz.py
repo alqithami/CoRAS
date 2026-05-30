@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import argparse
+import inspect
+import os
+import platform
 from pathlib import Path
 import sys
 from typing import Any
@@ -85,12 +88,55 @@ def main() -> None:
     parser.add_argument("--resize", type=int, default=96)
     parser.add_argument("--max-samples", type=int, default=0)
     parser.add_argument("--stride", type=int, default=1)
+    parser.add_argument(
+        "--video-backend",
+        type=str,
+        default=None,
+        choices=["pyav", "torchcodec", "video_reader"],
+        help=(
+            "Video decoder backend passed to LeRobotDataset. Defaults to "
+            "CORAS_LEROBOT_VIDEO_BACKEND, or pyav on macOS to avoid "
+            "TorchCodec/FFmpeg dylib failures."
+        ),
+    )
     args = parser.parse_args()
+
+    requested_backend = args.video_backend or os.environ.get("CORAS_LEROBOT_VIDEO_BACKEND")
+    if requested_backend is None and platform.system().lower() == "darwin":
+        requested_backend = "pyav"
+    if requested_backend:
+        os.environ["VIDEO_BACKEND"] = requested_backend
+        os.environ["CORAS_LEROBOT_VIDEO_BACKEND"] = requested_backend
+
     try:
         from lerobot.datasets.lerobot_dataset import LeRobotDataset
     except Exception as exc:
-        raise RuntimeError("Install LeRobot first, e.g. pip install 'lerobot[video]' or see HF LeRobot installation docs.") from exc
-    ds = LeRobotDataset(args.repo_id)
+        raise RuntimeError(
+            "Install LeRobot first. On macOS, prefer: pip install -r requirements-robotdata.txt; "
+            "then run with --video-backend pyav."
+        ) from exc
+
+    ds_kwargs = {}
+    if requested_backend:
+        try:
+            if "video_backend" in inspect.signature(LeRobotDataset).parameters:
+                ds_kwargs["video_backend"] = requested_backend
+        except Exception:
+            # Older LeRobot releases may not expose a stable signature; the env var above still helps.
+            pass
+    try:
+        ds = LeRobotDataset(args.repo_id, **ds_kwargs)
+    except RuntimeError as exc:
+        msg = str(exc).lower()
+        if "torchcodec" in msg or "libtorchcodec" in msg or "ffmpeg" in msg:
+            raise RuntimeError(
+                "LeRobot video decoding failed through TorchCodec/FFmpeg. "
+                "Re-run with --video-backend pyav, or set CORAS_LEROBOT_VIDEO_BACKEND=pyav. "
+                "If you want TorchCodec instead, install a matching FFmpeg library inside the same environment."
+            ) from exc
+        raise
+    if requested_backend:
+        print(f"Using LeRobot video_backend={requested_backend}")
     first = dict(ds[0])
     camera_key = choose_key(first, args.camera, "image")
     action_key = choose_key(first, args.action_key, "action")

@@ -4,13 +4,30 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 import sys
-import tempfile
+import os
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import yaml
 
 from coras.utils import run_cmd
+
+
+def apply_env_overrides(cfg: dict) -> dict:
+    """Allow shell scripts / RunPod jobs to adjust common knobs without editing YAML."""
+    mapping = {
+        "CORAS_NUM_WORKERS": ("num_workers", int),
+        "CORAS_BATCH_SIZE": ("batch_size", int),
+        "CORAS_EPOCHS": ("epochs", int),
+        "CORAS_ADAPTER_EPOCHS": ("adapter_epochs", int),
+        "CORAS_TORCH_THREADS": ("torch_threads", int),
+    }
+    out = dict(cfg)
+    for env_name, (key, caster) in mapping.items():
+        val = os.environ.get(env_name)
+        if val is not None and val != "":
+            out[key] = caster(val)
+    return out
 
 
 def main() -> None:
@@ -23,7 +40,7 @@ def main() -> None:
     parser.add_argument("--skip-train", action="store_true")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
-    base = yaml.safe_load(args.base_config.read_text())
+    base = apply_env_overrides(yaml.safe_load(args.base_config.read_text()))
     base_out = Path(base["output_dir"])
     configs_dir = base_out / "matrix_configs"
     configs_dir.mkdir(parents=True, exist_ok=True)

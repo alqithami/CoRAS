@@ -1,0 +1,34 @@
+seed: 0
+data_path: data/pusht_tokens_k64.npz
+output_dir: results/pusht_complete
+target_domains:
+- lerobot_pusht
+image_size: 96
+batch_size: 128
+num_workers: 0
+encoder: resnet18
+pretrained: false
+adapter_rank: 32
+freeze_encoder_from_start: true
+target_prompt_tuning: true
+epochs: 5
+adapter_epochs: 3
+lr: 0.0003
+adapter_lr: 0.001
+weight_decay: 0.0001
+alpha: 0.1
+tune_frac: 0.15
+calib_frac: 0.25
+test_frac: 0.25
+include_remaining_target_in_train: true
+torch_threads: 4
+methods:
+- top1_singleton
+- topk_calibrated
+- vanilla_conformal
+- aps_conformal
+- temperature_conformal
+- prompt_only_top1
+- coras
+- coras_aps
+- mondrian_domain

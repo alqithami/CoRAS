@@ -13,7 +13,7 @@ import torch.nn.functional as F
 import yaml
 from tqdm import tqdm
 
-from coras.data import RobotNPZDataset, episode_split, make_loaders
+from coras.data import RobotNPZDataset, episode_split, make_loaders, load_robot_npz
 from coras.models import ActionTokenModel
 from coras.utils import ensure_dir, set_seed, select_device, write_json
 
@@ -64,23 +64,25 @@ def main() -> None:
     device = select_device(args.device)
     out_dir = ensure_dir(cfg["output_dir"])
 
-    base_ds = RobotNPZDataset(cfg["data_path"], image_size=int(cfg.get("image_size", 96)))
+    base_arrays = load_robot_npz(cfg["data_path"])
+    base_ds = RobotNPZDataset(cfg["data_path"], image_size=int(cfg.get("image_size", 96)), arrays=base_arrays)
     split = episode_split(
-        base_ds.episodes,
-        base_ds.domains,
+        base_arrays.episodes,
+        base_arrays.domains,
         target_domains=cfg.get("target_domains"),
         tune_frac=float(cfg.get("tune_frac", 0.15)),
         calib_frac=float(cfg.get("calib_frac", 0.25)),
         test_frac=float(cfg.get("test_frac", 0.25)),
         seed=int(cfg.get("seed", 0)),
         include_remaining_target_in_train=bool(cfg.get("include_remaining_target_in_train", False)),
+        exclude_source_with_target_eval_episodes=bool(cfg.get("exclude_source_with_target_eval_episodes", False)),
     )
     np.savez(out_dir / "split_indices.npz", **split.as_dict())
     write_json(out_dir / "split_summary.json", {
         "train": int(len(split.train)), "tune": int(len(split.tune)), "calib": int(len(split.calib)), "test": int(len(split.test)),
         "target_domains": cfg.get("target_domains"),
     })
-    loaders = make_loaders(cfg["data_path"], cfg, split)
+    loaders = make_loaders(cfg["data_path"], cfg, split, arrays=base_arrays)
 
     model = ActionTokenModel(
         num_classes=base_ds.num_classes,

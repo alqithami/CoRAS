@@ -115,6 +115,7 @@ def expected_calibration_error(probs: np.ndarray, labels: np.ndarray, n_bins: in
 def evaluate_sets(set_mask: np.ndarray, labels: np.ndarray, probs: np.ndarray, unsafe: Optional[np.ndarray] = None) -> Dict[str, float]:
     labels = labels.astype(int)
     n = len(labels)
+    k_classes = int(probs.shape[1]) if probs.ndim == 2 else 0
     sizes = set_mask.sum(axis=1)
     covered = set_mask[np.arange(n), labels]
     pred = probs.argmax(axis=1)
@@ -124,9 +125,11 @@ def evaluate_sets(set_mask: np.ndarray, labels: np.ndarray, probs: np.ndarray, u
     fail_to_abstain = singleton & (~top1_correct)
     metrics: Dict[str, float] = {
         "n": int(n),
+        "num_classes": int(k_classes),
         "coverage": float(covered.mean()) if n else float("nan"),
         "noncoverage_rate": float(1.0 - covered.mean()) if n else float("nan"),
         "mean_set_size": float(sizes.mean()) if n else float("nan"),
+        "mean_set_size_norm": float(sizes.mean() / max(k_classes, 1)) if n else float("nan"),
         "median_set_size": float(np.median(sizes)) if n else float("nan"),
         "p90_set_size": float(np.quantile(sizes, 0.90)) if n else float("nan"),
         "top1_accuracy": float(top1_correct.mean()) if n else float("nan"),
@@ -136,6 +139,12 @@ def evaluate_sets(set_mask: np.ndarray, labels: np.ndarray, probs: np.ndarray, u
         "fail_to_abstain_rate": float(fail_to_abstain.mean()) if n else float("nan"),
         "ece_top1": expected_calibration_error(probs, labels) if n else float("nan"),
     }
+    # Planner-facing execute/defer diagnostics: execute when the conformal set is small.
+    for budget in (1, 2, 4, 8):
+        execute = sizes <= budget
+        metrics[f"execute_rate_set_le_{budget}"] = float(execute.mean()) if n else float("nan")
+        metrics[f"wrong_execute_rate_set_le_{budget}"] = float((execute & (~covered)).mean()) if n else float("nan")
+        metrics[f"coverage_when_set_le_{budget}"] = float(covered[execute].mean()) if execute.sum() else float("nan")
     if unsafe is not None and len(unsafe) == n:
         unsafe = unsafe.astype(bool)
         metrics["unsafe_n"] = int(unsafe.sum())

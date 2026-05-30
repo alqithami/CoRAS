@@ -1,0 +1,1501 @@
+[
+  {
+    "path": "data/autoeval_online_k32.npz",
+    "size_mb": 6.04,
+    "keys": [
+      "action_sources",
+      "actions",
+      "codebook_action_mean",
+      "codebook_action_scale",
+      "codebook_centers",
+      "codebook_centers_standardized",
+      "codebook_fit_domain_regex",
+      "codebook_fit_quantization_mse",
+      "codebook_quantization_mse",
+      "codebook_standardized_fit",
+      "collection_times",
+      "domains",
+      "episodes",
+      "eval_dirs",
+      "eval_ids",
+      "frame_indices",
+      "images",
+      "labels",
+      "language_commands",
+      "partial_success",
+      "success",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        270,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        270,
+        7
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        270
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        270
+      ],
+      "dtype": "<U27"
+    },
+    "episodes_meta": {
+      "shape": [
+        270
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        270
+      ],
+      "dtype": "<U37"
+    },
+    "success_meta": {
+      "shape": [
+        270
+      ],
+      "dtype": "float32"
+    },
+    "eval_ids_meta": {
+      "shape": [
+        270
+      ],
+      "dtype": "<U19"
+    },
+    "action_sources_meta": {
+      "shape": [
+        270
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 270,
+    "num_classes": 32,
+    "label_counts_top30": {
+      "0": 10,
+      "1": 15,
+      "2": 10,
+      "3": 9,
+      "4": 11,
+      "5": 9,
+      "6": 2,
+      "7": 11,
+      "8": 18,
+      "9": 1,
+      "10": 11,
+      "11": 10,
+      "12": 13,
+      "13": 5,
+      "14": 9,
+      "15": 2,
+      "16": 1,
+      "17": 11,
+      "18": 8,
+      "19": 2,
+      "20": 9,
+      "21": 3,
+      "22": 22,
+      "23": 26,
+      "24": 5,
+      "25": 9,
+      "26": 2,
+      "27": 15,
+      "28": 1,
+      "29": 2
+    },
+    "domains": {
+      "autoeval_online_source": 182,
+      "autoeval_online_target_late": 88
+    },
+    "num_episodes": 20,
+    "tasks_top30": {
+      "close_the_drawer": 36,
+      "open_the_drawer": 54,
+      "put_the_eggplant_in_the_blue_sink": 52,
+      "put_the_eggplant_in_the_yellow_basket": 128
+    },
+    "success_finite_n": 270,
+    "success_mean": 0.13333333333333333,
+    "success_values": {
+      "0.0": 234,
+      "1.0": 36
+    },
+    "num_eval_ids": 10,
+    "eval_ids_top30": {
+      "1111196156460424704": 26,
+      "1176111431212185580": 26,
+      "1581764125546394227": 76,
+      "169683719442171508": 18,
+      "3387443369925228786": 18,
+      "5979847816380374078": 18,
+      "7363781836011180870": 26,
+      "7561567595930845089": 18,
+      "7677733578906750947": 26,
+      "7693014164440479800": 18
+    },
+    "action_sources": {
+      "action": 270
+    }
+  },
+  {
+    "path": "data/autoeval_online_k64.npz",
+    "size_mb": 34.07,
+    "keys": [
+      "action_sources",
+      "actions",
+      "codebook_action_mean",
+      "codebook_action_scale",
+      "codebook_centers",
+      "codebook_centers_standardized",
+      "codebook_fit_domain_regex",
+      "codebook_fit_quantization_mse",
+      "codebook_quantization_mse",
+      "codebook_standardized_fit",
+      "collection_times",
+      "domains",
+      "episodes",
+      "eval_dirs",
+      "eval_ids",
+      "frame_indices",
+      "images",
+      "labels",
+      "language_commands",
+      "partial_success",
+      "success",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        1575,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        1575,
+        7
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        1575
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        1575
+      ],
+      "dtype": "<U27"
+    },
+    "episodes_meta": {
+      "shape": [
+        1575
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        1575
+      ],
+      "dtype": "<U37"
+    },
+    "success_meta": {
+      "shape": [
+        1575
+      ],
+      "dtype": "float32"
+    },
+    "eval_ids_meta": {
+      "shape": [
+        1575
+      ],
+      "dtype": "<U19"
+    },
+    "action_sources_meta": {
+      "shape": [
+        1575
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 1575,
+    "num_classes": 64,
+    "label_counts_top30": {
+      "0": 37,
+      "1": 32,
+      "2": 29,
+      "3": 22,
+      "4": 28,
+      "5": 42,
+      "6": 22,
+      "7": 26,
+      "8": 30,
+      "9": 35,
+      "10": 19,
+      "11": 24,
+      "12": 28,
+      "13": 29,
+      "14": 32,
+      "15": 24,
+      "16": 21,
+      "17": 26,
+      "18": 16,
+      "19": 55,
+      "20": 22,
+      "21": 18,
+      "22": 16,
+      "23": 66,
+      "24": 1,
+      "25": 58,
+      "26": 18,
+      "27": 14,
+      "28": 25,
+      "29": 10
+    },
+    "domains": {
+      "autoeval_online_source": 1045,
+      "autoeval_online_target_late": 530
+    },
+    "num_episodes": 37,
+    "tasks_top30": {
+      "close_the_drawer": 142,
+      "open_the_drawer": 108,
+      "put_the_eggplant_in_the_blue_sink": 100,
+      "put_the_eggplant_in_the_yellow_basket": 1225
+    },
+    "success_finite_n": 1575,
+    "success_mean": 0.09015873015873016,
+    "success_values": {
+      "0.0": 1433,
+      "1.0": 142
+    },
+    "num_eval_ids": 24,
+    "eval_ids_top30": {
+      "1111196156460424704": 50,
+      "1176111431212185580": 50,
+      "1581764125546394227": 150,
+      "1602207558780977632": 34,
+      "169683719442171508": 36,
+      "192213656460802061": 75,
+      "2154833989422334810": 36,
+      "2711923120615830055": 75,
+      "3387443369925228786": 36,
+      "3399199366642386760": 150,
+      "3521514540700584262": 75,
+      "4339796387463572581": 75,
+      "4562000884389916829": 75,
+      "4830480887029047419": 75,
+      "5445462381856925317": 75,
+      "5979847816380374078": 36,
+      "7363781836011180870": 50,
+      "7398351465790774718": 75,
+      "7461084441768804615": 75,
+      "7553068837506824567": 75,
+      "7561567595930845089": 36,
+      "7677733578906750947": 50,
+      "7693014164440479800": 36,
+      "8704528385492287366": 75
+    },
+    "action_sources": {
+      "action": 1575
+    }
+  },
+  {
+    "path": "data/droid100_raw.npz",
+    "size_mb": 473.91,
+    "keys": [
+      "actions",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        32212,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        32212,
+        7
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U8"
+    },
+    "episodes_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U7"
+    },
+    "n_labels": 32212,
+    "num_classes": 1,
+    "label_counts_top30": {
+      "0": 32212
+    },
+    "domains": {
+      "droid100": 32212
+    },
+    "num_episodes": 100,
+    "tasks_top30": {
+      "task_0": 166,
+      "task_1": 238,
+      "task_10": 196,
+      "task_11": 189,
+      "task_12": 92,
+      "task_13": 213,
+      "task_14": 248,
+      "task_15": 1066,
+      "task_16": 558,
+      "task_17": 119,
+      "task_18": 366,
+      "task_19": 398,
+      "task_2": 142,
+      "task_20": 259,
+      "task_21": 297,
+      "task_22": 684,
+      "task_23": 833,
+      "task_24": 1347,
+      "task_25": 605,
+      "task_26": 388,
+      "task_27": 126,
+      "task_28": 602,
+      "task_29": 304,
+      "task_3": 205,
+      "task_30": 144,
+      "task_31": 140,
+      "task_32": 211,
+      "task_33": 401,
+      "task_34": 100,
+      "task_35": 440
+    }
+  },
+  {
+    "path": "data/droid100_visual_shift_k128.npz",
+    "size_mb": 536.71,
+    "keys": [
+      "actions",
+      "codebook_action_mean",
+      "codebook_action_scale",
+      "codebook_centers",
+      "codebook_centers_standardized",
+      "codebook_fit_domain_regex",
+      "codebook_fit_quantization_mse",
+      "codebook_quantization_mse",
+      "codebook_standardized_fit",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "shift_metadata",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        32212,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        32212,
+        7
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U23"
+    },
+    "episodes_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U7"
+    },
+    "n_labels": 32212,
+    "num_classes": 128,
+    "label_counts_top30": {
+      "0": 174,
+      "1": 137,
+      "2": 554,
+      "3": 176,
+      "4": 356,
+      "5": 107,
+      "6": 230,
+      "7": 708,
+      "8": 86,
+      "9": 3660,
+      "10": 117,
+      "11": 118,
+      "12": 564,
+      "13": 151,
+      "14": 694,
+      "15": 104,
+      "16": 141,
+      "17": 454,
+      "18": 569,
+      "19": 47,
+      "20": 221,
+      "21": 160,
+      "22": 171,
+      "23": 146,
+      "24": 147,
+      "25": 322,
+      "26": 61,
+      "27": 233,
+      "28": 81,
+      "29": 73
+    },
+    "domains": {
+      "droid_shift_blur_noise": 3605,
+      "droid_shift_camera_crop": 2947,
+      "droid_shift_lighting": 2741,
+      "droid_shift_occlusion": 3357,
+      "real_clean_source": 19562
+    },
+    "num_episodes": 100,
+    "tasks_top30": {
+      "task_0": 166,
+      "task_1": 238,
+      "task_10": 196,
+      "task_11": 189,
+      "task_12": 92,
+      "task_13": 213,
+      "task_14": 248,
+      "task_15": 1066,
+      "task_16": 558,
+      "task_17": 119,
+      "task_18": 366,
+      "task_19": 398,
+      "task_2": 142,
+      "task_20": 259,
+      "task_21": 297,
+      "task_22": 684,
+      "task_23": 833,
+      "task_24": 1347,
+      "task_25": 605,
+      "task_26": 388,
+      "task_27": 126,
+      "task_28": 602,
+      "task_29": 304,
+      "task_3": 205,
+      "task_30": 144,
+      "task_31": 140,
+      "task_32": 211,
+      "task_33": 401,
+      "task_34": 100,
+      "task_35": 440
+    }
+  },
+  {
+    "path": "data/droid100_visual_shift_k64.npz",
+    "size_mb": 536.7,
+    "keys": [
+      "actions",
+      "codebook_action_mean",
+      "codebook_action_scale",
+      "codebook_centers",
+      "codebook_centers_standardized",
+      "codebook_fit_domain_regex",
+      "codebook_fit_quantization_mse",
+      "codebook_quantization_mse",
+      "codebook_standardized_fit",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "shift_metadata",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        32212,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        32212,
+        7
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U23"
+    },
+    "episodes_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U7"
+    },
+    "n_labels": 32212,
+    "num_classes": 64,
+    "label_counts_top30": {
+      "0": 161,
+      "1": 520,
+      "2": 4097,
+      "3": 111,
+      "4": 156,
+      "5": 324,
+      "6": 325,
+      "7": 189,
+      "8": 725,
+      "9": 927,
+      "10": 308,
+      "11": 341,
+      "12": 93,
+      "13": 319,
+      "14": 367,
+      "15": 228,
+      "16": 478,
+      "17": 548,
+      "18": 2021,
+      "19": 177,
+      "20": 1181,
+      "21": 266,
+      "22": 413,
+      "23": 183,
+      "24": 338,
+      "25": 258,
+      "26": 650,
+      "27": 573,
+      "28": 791,
+      "29": 117
+    },
+    "domains": {
+      "droid_shift_blur_noise": 3605,
+      "droid_shift_camera_crop": 2947,
+      "droid_shift_lighting": 2741,
+      "droid_shift_occlusion": 3357,
+      "real_clean_source": 19562
+    },
+    "num_episodes": 100,
+    "tasks_top30": {
+      "task_0": 166,
+      "task_1": 238,
+      "task_10": 196,
+      "task_11": 189,
+      "task_12": 92,
+      "task_13": 213,
+      "task_14": 248,
+      "task_15": 1066,
+      "task_16": 558,
+      "task_17": 119,
+      "task_18": 366,
+      "task_19": 398,
+      "task_2": 142,
+      "task_20": 259,
+      "task_21": 297,
+      "task_22": 684,
+      "task_23": 833,
+      "task_24": 1347,
+      "task_25": 605,
+      "task_26": 388,
+      "task_27": 126,
+      "task_28": 602,
+      "task_29": 304,
+      "task_3": 205,
+      "task_30": 144,
+      "task_31": 140,
+      "task_32": 211,
+      "task_33": 401,
+      "task_34": 100,
+      "task_35": 440
+    }
+  },
+  {
+    "path": "data/droid100_visual_shift_v3.npz",
+    "size_mb": 536.69,
+    "keys": [
+      "actions",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "shift_metadata",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        32212,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        32212,
+        7
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U23"
+    },
+    "episodes_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        32212
+      ],
+      "dtype": "<U7"
+    },
+    "n_labels": 32212,
+    "num_classes": 1,
+    "label_counts_top30": {
+      "0": 32212
+    },
+    "domains": {
+      "droid_shift_blur_noise": 3605,
+      "droid_shift_camera_crop": 2947,
+      "droid_shift_lighting": 2741,
+      "droid_shift_occlusion": 3357,
+      "real_clean_source": 19562
+    },
+    "num_episodes": 100,
+    "tasks_top30": {
+      "task_0": 166,
+      "task_1": 238,
+      "task_10": 196,
+      "task_11": 189,
+      "task_12": 92,
+      "task_13": 213,
+      "task_14": 248,
+      "task_15": 1066,
+      "task_16": 558,
+      "task_17": 119,
+      "task_18": 366,
+      "task_19": 398,
+      "task_2": 142,
+      "task_20": 259,
+      "task_21": 297,
+      "task_22": 684,
+      "task_23": 833,
+      "task_24": 1347,
+      "task_25": 605,
+      "task_26": 388,
+      "task_27": 126,
+      "task_28": 602,
+      "task_29": 304,
+      "task_3": 205,
+      "task_30": 144,
+      "task_31": 140,
+      "task_32": 211,
+      "task_33": 401,
+      "task_34": 100,
+      "task_35": 440
+    }
+  },
+  {
+    "path": "data/pusht_raw.npz",
+    "size_mb": 34.6,
+    "keys": [
+      "actions",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        25650,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U13"
+    },
+    "episodes_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 25650,
+    "num_classes": 1,
+    "label_counts_top30": {
+      "0": 25650
+    },
+    "domains": {
+      "lerobot_pusht": 25650
+    },
+    "num_episodes": 206,
+    "tasks_top30": {
+      "task_0": 25650
+    }
+  },
+  {
+    "path": "data/pusht_tokens_k64.npz",
+    "size_mb": 34.61,
+    "keys": [
+      "actions",
+      "codebook_centers",
+      "codebook_quantization_mse",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        25650,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U13"
+    },
+    "episodes_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 25650,
+    "num_classes": 64,
+    "label_counts_top30": {
+      "0": 521,
+      "1": 760,
+      "2": 531,
+      "3": 394,
+      "4": 387,
+      "5": 268,
+      "6": 375,
+      "7": 273,
+      "8": 236,
+      "9": 532,
+      "10": 401,
+      "11": 421,
+      "12": 213,
+      "13": 439,
+      "14": 354,
+      "15": 355,
+      "16": 448,
+      "17": 609,
+      "18": 748,
+      "19": 939,
+      "20": 244,
+      "21": 424,
+      "22": 301,
+      "23": 214,
+      "24": 465,
+      "25": 212,
+      "26": 474,
+      "27": 503,
+      "28": 557,
+      "29": 285
+    },
+    "domains": {
+      "lerobot_pusht": 25650
+    },
+    "num_episodes": 206,
+    "tasks_top30": {
+      "task_0": 25650
+    }
+  },
+  {
+    "path": "data/pusht_visual_shift_k128.npz",
+    "size_mb": 77.2,
+    "keys": [
+      "actions",
+      "codebook_action_mean",
+      "codebook_action_scale",
+      "codebook_centers",
+      "codebook_centers_standardized",
+      "codebook_fit_domain_regex",
+      "codebook_fit_quantization_mse",
+      "codebook_quantization_mse",
+      "codebook_standardized_fit",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "shift_metadata",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        25650,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U23"
+    },
+    "episodes_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 25650,
+    "num_classes": 128,
+    "label_counts_top30": {
+      "0": 215,
+      "1": 275,
+      "2": 63,
+      "3": 253,
+      "4": 250,
+      "5": 204,
+      "6": 123,
+      "7": 228,
+      "8": 184,
+      "9": 128,
+      "10": 341,
+      "11": 145,
+      "12": 155,
+      "13": 107,
+      "14": 209,
+      "15": 235,
+      "16": 584,
+      "17": 256,
+      "18": 142,
+      "19": 192,
+      "20": 171,
+      "21": 335,
+      "22": 126,
+      "23": 168,
+      "24": 126,
+      "25": 120,
+      "26": 154,
+      "27": 232,
+      "28": 196,
+      "29": 250
+    },
+    "domains": {
+      "pusht_shift_blur_noise": 2661,
+      "pusht_shift_camera_crop": 2630,
+      "pusht_shift_lighting": 2434,
+      "pusht_shift_occlusion": 2434,
+      "real_clean_source": 15491
+    },
+    "num_episodes": 206,
+    "tasks_top30": {
+      "task_0": 25650
+    }
+  },
+  {
+    "path": "data/pusht_visual_shift_k32.npz",
+    "size_mb": 77.19,
+    "keys": [
+      "actions",
+      "codebook_action_mean",
+      "codebook_action_scale",
+      "codebook_centers",
+      "codebook_centers_standardized",
+      "codebook_fit_domain_regex",
+      "codebook_fit_quantization_mse",
+      "codebook_quantization_mse",
+      "codebook_standardized_fit",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "shift_metadata",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        25650,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U23"
+    },
+    "episodes_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 25650,
+    "num_classes": 32,
+    "label_counts_top30": {
+      "0": 676,
+      "1": 1537,
+      "2": 1116,
+      "3": 608,
+      "4": 745,
+      "5": 850,
+      "6": 867,
+      "7": 1035,
+      "8": 1143,
+      "9": 774,
+      "10": 522,
+      "11": 243,
+      "12": 706,
+      "13": 675,
+      "14": 418,
+      "15": 405,
+      "16": 965,
+      "17": 856,
+      "18": 838,
+      "19": 806,
+      "20": 782,
+      "21": 1341,
+      "22": 498,
+      "23": 904,
+      "24": 475,
+      "25": 824,
+      "26": 568,
+      "27": 1009,
+      "28": 1126,
+      "29": 653
+    },
+    "domains": {
+      "pusht_shift_blur_noise": 2661,
+      "pusht_shift_camera_crop": 2630,
+      "pusht_shift_lighting": 2434,
+      "pusht_shift_occlusion": 2434,
+      "real_clean_source": 15491
+    },
+    "num_episodes": 206,
+    "tasks_top30": {
+      "task_0": 25650
+    }
+  },
+  {
+    "path": "data/pusht_visual_shift_k64.npz",
+    "size_mb": 77.19,
+    "keys": [
+      "actions",
+      "codebook_action_mean",
+      "codebook_action_scale",
+      "codebook_centers",
+      "codebook_centers_standardized",
+      "codebook_fit_domain_regex",
+      "codebook_fit_quantization_mse",
+      "codebook_quantization_mse",
+      "codebook_standardized_fit",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "shift_metadata",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        25650,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U23"
+    },
+    "episodes_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 25650,
+    "num_classes": 64,
+    "label_counts_top30": {
+      "0": 405,
+      "1": 812,
+      "2": 501,
+      "3": 356,
+      "4": 466,
+      "5": 370,
+      "6": 314,
+      "7": 140,
+      "8": 611,
+      "9": 485,
+      "10": 392,
+      "11": 246,
+      "12": 212,
+      "13": 440,
+      "14": 478,
+      "15": 222,
+      "16": 396,
+      "17": 328,
+      "18": 253,
+      "19": 293,
+      "20": 599,
+      "21": 268,
+      "22": 693,
+      "23": 488,
+      "24": 310,
+      "25": 272,
+      "26": 352,
+      "27": 470,
+      "28": 201,
+      "29": 291
+    },
+    "domains": {
+      "pusht_shift_blur_noise": 2661,
+      "pusht_shift_camera_crop": 2630,
+      "pusht_shift_lighting": 2434,
+      "pusht_shift_occlusion": 2434,
+      "real_clean_source": 15491
+    },
+    "num_episodes": 206,
+    "tasks_top30": {
+      "task_0": 25650
+    }
+  },
+  {
+    "path": "data/pusht_visual_shift_v3.npz",
+    "size_mb": 77.18,
+    "keys": [
+      "actions",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "shift_metadata",
+      "tasks"
+    ],
+    "images_meta": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        25650,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U23"
+    },
+    "episodes_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        25650
+      ],
+      "dtype": "<U6"
+    },
+    "n_labels": 25650,
+    "num_classes": 1,
+    "label_counts_top30": {
+      "0": 25650
+    },
+    "domains": {
+      "pusht_shift_blur_noise": 2661,
+      "pusht_shift_camera_crop": 2630,
+      "pusht_shift_lighting": 2434,
+      "pusht_shift_occlusion": 2434,
+      "real_clean_source": 15491
+    },
+    "num_episodes": 206,
+    "tasks_top30": {
+      "task_0": 25650
+    }
+  },
+  {
+    "path": "data/sim_affordance_fast.npz",
+    "size_mb": 10.47,
+    "keys": [
+      "actions",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "metadata",
+      "tasks",
+      "unsafe"
+    ],
+    "images_meta": {
+      "shape": [
+        1200,
+        64,
+        64,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        1200,
+        3
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        1200
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        1200
+      ],
+      "dtype": "<U21"
+    },
+    "episodes_meta": {
+      "shape": [
+        1200
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        1200
+      ],
+      "dtype": "<U25"
+    },
+    "n_labels": 1200,
+    "num_classes": 16,
+    "label_counts_top30": {
+      "0": 82,
+      "1": 80,
+      "2": 72,
+      "3": 67,
+      "4": 74,
+      "5": 89,
+      "6": 89,
+      "7": 61,
+      "8": 76,
+      "9": 71,
+      "10": 63,
+      "11": 63,
+      "12": 68,
+      "13": 80,
+      "14": 91,
+      "15": 74
+    },
+    "domains": {
+      "sim_source_clean": 441,
+      "sim_source_clutter": 233,
+      "sim_source_texture": 297,
+      "target_camera_shift": 112,
+      "target_lighting_shift": 67,
+      "target_occluded": 50
+    },
+    "num_episodes": 60,
+    "tasks_top30": {
+      "sim_pick_place_affordance": 1200
+    }
+  },
+  {
+    "path": "data/sim_affordance_v2.npz",
+    "size_mb": 169.76,
+    "keys": [
+      "actions",
+      "domains",
+      "episodes",
+      "images",
+      "labels",
+      "metadata",
+      "tasks",
+      "unsafe"
+    ],
+    "images_meta": {
+      "shape": [
+        9000,
+        96,
+        96,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "actions_meta": {
+      "shape": [
+        9000,
+        3
+      ],
+      "dtype": "float32"
+    },
+    "labels_meta": {
+      "shape": [
+        9000
+      ],
+      "dtype": "int64"
+    },
+    "domains_meta": {
+      "shape": [
+        9000
+      ],
+      "dtype": "<U21"
+    },
+    "episodes_meta": {
+      "shape": [
+        9000
+      ],
+      "dtype": "int64"
+    },
+    "tasks_meta": {
+      "shape": [
+        9000
+      ],
+      "dtype": "<U25"
+    },
+    "n_labels": 9000,
+    "num_classes": 16,
+    "label_counts_top30": {
+      "0": 558,
+      "1": 540,
+      "2": 573,
+      "3": 619,
+      "4": 546,
+      "5": 547,
+      "6": 539,
+      "7": 547,
+      "8": 576,
+      "9": 528,
+      "10": 593,
+      "11": 547,
+      "12": 579,
+      "13": 551,
+      "14": 595,
+      "15": 562
+    },
+    "domains": {
+      "sim_source_clean": 3200,
+      "sim_source_clutter": 1663,
+      "sim_source_texture": 2164,
+      "target_camera_shift": 982,
+      "target_lighting_shift": 652,
+      "target_occluded": 339
+    },
+    "num_episodes": 450,
+    "tasks_top30": {
+      "sim_pick_place_affordance": 9000
+    }
+  }
+]

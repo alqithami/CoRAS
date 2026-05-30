@@ -3,6 +3,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 mkdir -p data results configs/generated
+export CORAS_LEROBOT_VIDEO_BACKEND="${CORAS_LEROBOT_VIDEO_BACKEND:-pyav}"
 # DROID_100 is a small public LeRobot subset of the DROID robot-manipulation dataset.
 # The camera key below is documented in the Hugging Face dataset card.
 python scripts/export_lerobot_to_npz.py \
@@ -12,6 +13,7 @@ python scripts/export_lerobot_to_npz.py \
   --domain-strategy task \
   --resize 96 \
   --max-samples ${CORAS_DROID_MAX_SAMPLES:-32000} \
+  --video-backend ${CORAS_LEROBOT_VIDEO_BACKEND} \
   --out data/droid100_raw.npz
 python scripts/build_action_codebook.py --input data/droid100_raw.npz --out data/droid100_tokens_k64.npz --num-codes ${CORAS_CODEBOOK_K:-64} --seed 0
 python scripts/write_config_from_npz.py \
@@ -27,7 +29,7 @@ python scripts/write_config_from_npz.py \
   --epochs ${CORAS_EPOCHS:-5} \
   --adapter-epochs ${CORAS_ADAPTER_EPOCHS:-3} \
   --calib-frac 0.25 \
-  --num-workers ${CORAS_NUM_WORKERS:-4}
+  --num-workers ${CORAS_NUM_WORKERS:-0}
 python scripts/run_experiment_matrix.py \
   --base-config configs/generated/droid100_auto.yaml \
   --seeds ${CORAS_SEEDS:-0 1 2} \

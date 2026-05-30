@@ -1,0 +1,7 @@
+# Mac-friendly robot-data dependencies for LeRobot offline export.
+# This intentionally avoids forcing torchcodec; the exporter defaults to the pyav backend on macOS.
+lerobot>=0.5.1
+huggingface_hub>=0.24
+datasets>=4.0.0,<5.0.0
+av>=12.0
+imageio-ffmpeg>=0.6.0

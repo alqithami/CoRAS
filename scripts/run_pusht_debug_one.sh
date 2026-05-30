@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT"
+export CORAS_LEROBOT_VIDEO_BACKEND="${CORAS_LEROBOT_VIDEO_BACKEND:-pyav}"
+export CORAS_NUM_WORKERS="${CORAS_NUM_WORKERS:-0}"
+export CORAS_PUSHT_MAX_SAMPLES="${CORAS_PUSHT_MAX_SAMPLES:-2000}"
+export CORAS_SEEDS="${CORAS_SEEDS:-0}"
+export CORAS_ALPHAS="${CORAS_ALPHAS:-0.10}"
+export CORAS_CALIB_FRACS="${CORAS_CALIB_FRACS:-0.25}"
+export CORAS_EPOCHS="${CORAS_EPOCHS:-1}"
+export CORAS_ADAPTER_EPOCHS="${CORAS_ADAPTER_EPOCHS:-1}"
+export CORAS_BATCH_SIZE="${CORAS_BATCH_SIZE:-64}"
+bash scripts/run_pusht_complete.sh

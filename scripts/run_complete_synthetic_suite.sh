@@ -4,6 +4,13 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 export OMP_NUM_THREADS=${OMP_NUM_THREADS:-2}
 export MKL_NUM_THREADS=${MKL_NUM_THREADS:-2}
+# macOS uses spawn-based worker startup; 0 workers avoids duplicate memory use on Apple Silicon.
+# RunPod/Linux users can override: CORAS_NUM_WORKERS=4 bash scripts/run_complete_synthetic_suite.sh
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  export CORAS_NUM_WORKERS=${CORAS_NUM_WORKERS:-0}
+else
+  export CORAS_NUM_WORKERS=${CORAS_NUM_WORKERS:-2}
+fi
 mkdir -p data results
 python scripts/make_simulated_affordance_data.py --out data/sim_affordance_v2.npz --n ${CORAS_SIM_N:-9000} --size 96 --grid 4 --episode-len 20 --seed 123
 python scripts/run_experiment_matrix.py \
