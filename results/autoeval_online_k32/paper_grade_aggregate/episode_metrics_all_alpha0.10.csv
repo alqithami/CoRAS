@@ -1,0 +1,10 @@
+alpha,method,n_steps,n_episodes,step_coverage,episode_mean_coverage,episode_median_coverage,episode_all_steps_covered_rate,mean_set_size,episode_block_boot_mean,episode_block_boot_lo95,episode_block_boot_hi95,file,run_dir
+0.1,aps_conformal,22,2,1.0,1.0,1.0,1.0,25.727272727272727,1.0,1.0,1.0,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,coras,22,2,0.8636363636363636,0.8675213675213675,0.8675213675213675,0.0,13.363636363636363,0.8652049339549339,0.8461538461538461,0.8888888888888888,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,coras_aps,22,2,0.9090909090909092,0.9230769230769232,0.9230769230769232,0.5,13.227272727272728,0.9147377622377622,0.8461538461538461,1.0,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,mondrian_domain,22,2,0.8636363636363636,0.8675213675213675,0.8675213675213675,0.0,13.363636363636363,0.8652049339549339,0.8461538461538461,0.8888888888888888,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,prompt_only_top1,22,2,0.0454545454545454,0.0384615384615384,0.0384615384615384,0.0,1.0,0.0426311188811188,0.0,0.0769230769230769,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,temperature_conformal,22,2,1.0,1.0,1.0,1.0,27.681818181818183,1.0,1.0,1.0,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,top1_singleton,22,2,0.1363636363636363,0.1153846153846153,0.1153846153846153,0.0,1.0,0.1278933566433566,0.0,0.2307692307692307,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,topk_calibrated,22,2,1.0,1.0,1.0,1.0,26.0,1.0,1.0,1.0,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25
+0.1,vanilla_conformal,22,2,1.0,1.0,1.0,1.0,27.727272727272727,1.0,1.0,1.0,prediction_sets_compact_alpha0.10.csv,seed0_calib0.25

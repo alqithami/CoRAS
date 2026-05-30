@@ -1,0 +1,10 @@
+method,alpha,domain,coverage_mean,coverage_std,mean_set_size_mean,fail_to_abstain_rate_mean,runs
+aps_conformal,0.1,autoeval_online_target_late,1.0,,25.727272727272727,0.0,1
+coras,0.1,autoeval_online_target_late,0.8636363636363636,,13.363636363636363,0.0,1
+coras_aps,0.1,autoeval_online_target_late,0.9090909090909092,,13.227272727272728,0.0,1
+mondrian_domain,0.1,autoeval_online_target_late,0.8636363636363636,,13.363636363636363,0.0,1
+prompt_only_top1,0.1,autoeval_online_target_late,0.0454545454545454,,1.0,0.9545454545454546,1
+temperature_conformal,0.1,autoeval_online_target_late,1.0,,27.681818181818183,0.0,1
+top1_singleton,0.1,autoeval_online_target_late,0.1363636363636363,,1.0,0.8636363636363636,1
+topk_calibrated,0.1,autoeval_online_target_late,1.0,,26.0,0.0,1
+vanilla_conformal,0.1,autoeval_online_target_late,1.0,,27.727272727272727,0.0,1

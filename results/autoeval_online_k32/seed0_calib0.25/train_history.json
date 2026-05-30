@@ -1,0 +1,105 @@
+{
+  "device": "mps",
+  "history": [
+    {
+      "epoch": 0,
+      "stage": "source_train",
+      "train_acc": 0.02197802197802198,
+      "train_loss": 3.632745169021271,
+      "train_n": 182,
+      "tune_acc": 0.0,
+      "tune_loss": 3.5258166790008545,
+      "tune_n": 13
+    },
+    {
+      "epoch": 1,
+      "stage": "source_train",
+      "train_acc": 0.027472527472527472,
+      "train_loss": 3.4553818100101346,
+      "train_n": 182,
+      "tune_acc": 0.0,
+      "tune_loss": 3.4684805870056152,
+      "tune_n": 13
+    },
+    {
+      "epoch": 2,
+      "stage": "source_train",
+      "train_acc": 0.0989010989010989,
+      "train_loss": 3.295619092144809,
+      "train_n": 182,
+      "tune_acc": 0.0,
+      "tune_loss": 3.408883810043335,
+      "tune_n": 13
+    },
+    {
+      "epoch": 3,
+      "stage": "source_train",
+      "train_acc": 0.15384615384615385,
+      "train_loss": 3.1540886072012095,
+      "train_n": 182,
+      "tune_acc": 0.0,
+      "tune_loss": 3.3693597316741943,
+      "tune_n": 13
+    },
+    {
+      "epoch": 4,
+      "stage": "source_train",
+      "train_acc": 0.21428571428571427,
+      "train_loss": 2.9777275625166,
+      "train_n": 182,
+      "tune_acc": 0.0,
+      "tune_loss": 3.3207015991210938,
+      "tune_n": 13
+    },
+    {
+      "epoch": 5,
+      "stage": "source_train",
+      "train_acc": 0.24175824175824176,
+      "train_loss": 2.8327757735828776,
+      "train_n": 182,
+      "tune_acc": 0.07692307692307693,
+      "tune_loss": 3.2698302268981934,
+      "tune_n": 13
+    },
+    {
+      "calib_acc": 0.22727272727272727,
+      "calib_loss": 2.9367940425872803,
+      "calib_n": 22,
+      "epoch": 0,
+      "stage": "target_adapter",
+      "tune_acc": 0.0,
+      "tune_loss": 3.490938663482666,
+      "tune_n": 13
+    },
+    {
+      "calib_acc": 0.2727272727272727,
+      "calib_loss": 2.8454015254974365,
+      "calib_n": 22,
+      "epoch": 1,
+      "stage": "target_adapter",
+      "tune_acc": 0.07692307692307693,
+      "tune_loss": 3.2098262310028076,
+      "tune_n": 13
+    },
+    {
+      "calib_acc": 0.2727272727272727,
+      "calib_loss": 2.800541877746582,
+      "calib_n": 22,
+      "epoch": 2,
+      "stage": "target_adapter",
+      "tune_acc": 0.15384615384615385,
+      "tune_loss": 2.9180524349212646,
+      "tune_n": 13
+    },
+    {
+      "calib_acc": 0.22727272727272727,
+      "calib_loss": 2.84578013420105,
+      "calib_n": 22,
+      "epoch": 3,
+      "stage": "target_adapter",
+      "tune_acc": 0.15384615384615385,
+      "tune_loss": 2.651073932647705,
+      "tune_n": 13
+    }
+  ]
+}

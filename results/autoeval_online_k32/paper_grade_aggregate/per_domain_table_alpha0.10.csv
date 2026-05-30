@@ -1,0 +1,10 @@
+method,domain,n_runs,coverage_mean,coverage_std,mean_set_size_mean,mean_set_size_std,top1_accuracy_mean,top1_accuracy_std,fail_to_abstain_rate_mean,fail_to_abstain_rate_std
+aps_conformal,autoeval_online_target_late,1,1.0,0.0,25.727272727272727,0.0,0.1363636363636363,0.0,0.0,0.0
+coras,autoeval_online_target_late,1,0.8636363636363636,0.0,13.363636363636363,0.0,0.0454545454545454,0.0,0.0,0.0
+coras_aps,autoeval_online_target_late,1,0.9090909090909092,0.0,13.227272727272728,0.0,0.0454545454545454,0.0,0.0,0.0
+mondrian_domain,autoeval_online_target_late,1,0.8636363636363636,0.0,13.363636363636363,0.0,0.0454545454545454,0.0,0.0,0.0
+prompt_only_top1,autoeval_online_target_late,1,0.0454545454545454,0.0,1.0,0.0,0.0454545454545454,0.0,0.9545454545454546,0.0
+temperature_conformal,autoeval_online_target_late,1,1.0,0.0,27.681818181818183,0.0,0.1363636363636363,0.0,0.0,0.0
+top1_singleton,autoeval_online_target_late,1,0.1363636363636363,0.0,1.0,0.0,0.1363636363636363,0.0,0.8636363636363636,0.0
+topk_calibrated,autoeval_online_target_late,1,1.0,0.0,26.0,0.0,0.1363636363636363,0.0,0.0,0.0
+vanilla_conformal,autoeval_online_target_late,1,1.0,0.0,27.727272727272727,0.0,0.1363636363636363,0.0,0.0,0.0

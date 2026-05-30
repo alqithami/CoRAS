@@ -1,0 +1,15 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Method & Coverage & Gap & Set size & Top-1 & Action L2 \\
+\midrule
+topk\_calibrated & 0.909 & 0.025 & 100.78 & 0.064 & 0.310 \\
+temperature\_conformal & 0.905 & 0.027 & 99.83 & 0.064 & 0.311 \\
+aps\_conformal & 0.904 & 0.029 & 99.90 & 0.064 & 0.311 \\
+vanilla\_conformal & 0.905 & 0.034 & 100.39 & 0.064 & 0.311 \\
+coras & 0.900 & 0.035 & 98.99 & 0.071 & 0.312 \\
+coras\_aps & 0.898 & 0.036 & 98.41 & 0.071 & 0.312 \\
+mondrian\_domain & 0.879 & 0.050 & 94.87 & 0.071 & 0.314 \\
+prompt\_only\_top1 & 0.071 & 0.829 & 1.00 & 0.071 & 0.747 \\
+top1\_singleton & 0.064 & 0.836 & 1.00 & 0.064 & 0.799 \\
+\bottomrule
+\end{tabular}

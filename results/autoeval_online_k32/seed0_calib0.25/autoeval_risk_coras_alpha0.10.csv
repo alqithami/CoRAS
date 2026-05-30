@@ -1,0 +1,2 @@
+method,alpha,n_frames,n_episodes,failure_rate_frame,failure_rate_episode,frame_failure_auc_set_size,episode_failure_auc_mean_set_size,episode_failure_auc_max_set_size,mean_uncertainty_success,mean_uncertainty_failure
+coras,0.1,22,3,0.18181818181818182,0.3333333333333333,0.625,1.0,1.0,13.11111111111111,14.5
