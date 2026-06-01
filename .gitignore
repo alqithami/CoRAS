@@ -1,0 +1,57 @@
+# Python caches and build products
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+env/
+ENV/
+conda-meta/
+
+# Local data, outputs, and caches
+data/
+outputs/
+wandb/
+runs/
+logs/
+*.log
+
+# Model checkpoints and large binary experiment artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.npz
+*.pkl
+*.tar
+*.tar.gz
+*.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# LaTeX/build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+
+# Notes:
+# - The repository intentionally includes aggregate result tables, metadata,
+#   source code, configs, and the supplementary PDF.
+# - Raw public-dataset exports, AutoEval trajectory pickles, local NPZ files,
+#   and trained checkpoints should not be committed.
