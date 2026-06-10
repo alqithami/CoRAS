@@ -27,7 +27,6 @@ The implementation evaluates top-1 prediction, calibrated top-k sets, vanilla co
 ├── coras/                         # Core package: data loading, models, conformal utilities
 ├── scripts/                       # Data export, training, evaluation, diagnostics, aggregation
 ├── configs/                       # Base and generated experiment configurations
-├── docs/                          # Protocol notes and troubleshooting material
 ├── runpod/                        # CUDA/RunPod helper files
 ├── results/                       # Aggregate result tables and plots; no checkpoints
 ├── metadata/                      # Dataset summaries and file manifests
