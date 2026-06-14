@@ -236,7 +236,3 @@ These metrics separate statistical validity from operational sharpness. A method
 ## Scope
 
 This repository supports reproducibility for an offline robot-learning study. It does not provide a closed-loop physical-robot controller, a certified safety shield, or a new real-robot deployment. CoRAS is a set-valued uncertainty interface intended to expose calibrated action ambiguity to downstream planning or monitoring modules.
-
-## Anonymous review artifact
-
-For double-blind review, serve this repository through an anonymized mirror. Remove author-identifying repository metadata, local paths, private logs, raw data, checkpoints, and any non-anonymized commit metadata from the submitted artifact.
